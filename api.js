@@ -26,7 +26,12 @@ router.get("/get",function(req,res){
 
 /** 添加数据接口 */
 router.post("/add",function(req,res){
+    //返回状态码
+    // res.status(200).send()
+    
 	const data=req.body;
+    //终端打印数据
+    console.log(123,data)
     //此处可对data数据进行处理
     sql.add(schema,data).then((data)=>{
         res.send({
@@ -35,6 +40,7 @@ router.post("/add",function(req,res){
             data:data
         })
         // res.redirect("/");//重定向
+        // res.status(500).send()
     })
 })
 /** 删除数据接口 */

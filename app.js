@@ -1,3 +1,4 @@
+//5,终端启动后端服务命令：node app.js
 /** 创建服务 */
 const express = require("express");
 const app = express();
